@@ -211,13 +211,17 @@
 
 /*  Datetimerangepicker styles:  */
 .dtrp.dropdown{
-    position: absolute;
-    float: left;
-    right: 140px;
-}
-.dtrp.dropdown.dtrp-left{
     position: relative;
-    top: 5px;
+}
+.dtrp.dtrp-left{
+
+}
+.dtrp.dtrp-right{
+    left: 80px;
+}
+.dtrp.dropdown{
+    top: -95px;
+    right: 0;
 }
 .dtrp-container{
     position: relative;
@@ -225,7 +229,7 @@
 }
 
 .dtrp-container.dtrp-pickers-open{
-    width: 670px;
+    width: 700px;
     max-width: none;
 }
 .dtrp-container.dtrp-pickers-open.dtrp-right{
@@ -234,7 +238,14 @@
 .dtrp-dropdown-triangle,
 .dtrp-dropdown-triangle-border{
     position: absolute;
+}
+.dtrp-left .dtrp-dropdown-triangle,
+.dtrp-left .dtrp-dropdown-triangle-border{
     right: 7px;
+}
+.dtrp-right .dtrp-dropdown-triangle,
+.dtrp-right .dtrp-dropdown-triangle-border{
+    left: 7px;
 }
 .dtrp-dropdown-triangle:before{
     content:'';
@@ -260,9 +271,13 @@
     top: -12px;
     z-index: 1000;
 }
-.dtrp-left span.dtrp-dropdown-triangle,
-.dtrp-left span.dtrp-dropdown-triangle-border{
-    left: 100%;
+.dtrp-pickers-open.dtrp-left span.dtrp-dropdown-triangle,
+.dtrp-pickers-open.dtrp-left span.dtrp-dropdown-triangle-border{
+    right: 40px;
+}
+.dtrp-pickers-open.dtrp-right span.dtrp-dropdown-triangle,
+.dtrp-pickers-open.dtrp-right span.dtrp-dropdown-triangle-border{
+    left: 0px;
 }
 .dtrp-container .bootstrap-datetimepicker-widget{
     font-size: 12px;
@@ -275,8 +290,10 @@
     position: relative;
 }
 .dtrp .dtrp-inner-container.dropdown-menu{
-    position: absolute;
-    right: -20px;
+    position: relative;
+}
+.dtrp.dtrp-pickers-open .dtrp-inner-container.dropdown-menu{
+    min-height: 280px;
 }
 .dtrp-inner-container{
     padding: 0;
@@ -305,9 +322,12 @@
     padding: 0 10px;
     width: auto;
 }
+.dtrp-right.dtrp-pickers-open.dtrp-container .col-sm-2{
+    float: right;
+}
 .dtrp-container .col-sm-4{
-    min-width: 250px;
-    margin-right: 8px;
+    min-width: 260px;
+    margin-right: 15px;
 }
 .dtrp-container .col-sm-4:last-of-type{
     margin-right: 5px;
@@ -318,7 +338,7 @@
 .dtrp-pickers-open .dtrp-ranges-list{
     width: 100%;
     margin-top: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .dtrp-ranges-list .dtrp-ranges-list-item{
     width: 100%;
@@ -382,11 +402,12 @@
     width: 30px;
 }
 .dtrp-buttons-container{
-    padding-left: 2px;
+    text-align: center;
     padding-top: 10px;
 }
 .dtrp-buttons-container button{
     margin-right: 5px;
+    padding: 4px 6px;
 }
 .dtrp .bootstrap-datetimepicker-widget{
     border: none;
