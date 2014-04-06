@@ -2,7 +2,10 @@
  * DateTimeRangePicker for Bootstrap v3
  * John Grese
  */
-.dtrp{ display: none; }
+.dtrp{
+    display: none;
+    width: 100%;
+}
 .dtrp .bootstrap-datetimepicker-widget {
     top: 0;
     left: 0;
@@ -208,15 +211,25 @@
 
 /*  Datetimerangepicker styles:  */
 .dtrp.dropdown{
+    position: absolute;
+    float: left;
+    right: 140px;
+}
+.dtrp.dropdown.dtrp-left{
     position: relative;
+    top: 5px;
 }
 .dtrp-container{
     position: relative;
     max-width: 140px;
 }
+
 .dtrp-container.dtrp-pickers-open{
-    width: auto;
+    width: 700px;
     max-width: none;
+}
+.dtrp-container.dtrp-pickers-open.dtrp-right{
+    right: 140px;
 }
 .dtrp-dropdown-triangle,
 .dtrp-dropdown-triangle-border{
@@ -249,7 +262,7 @@
 }
 .dtrp-left span.dtrp-dropdown-triangle,
 .dtrp-left span.dtrp-dropdown-triangle-border{
-
+    left: 100%;
 }
 .dtrp-container .bootstrap-datetimepicker-widget{
     font-size: 12px;
@@ -261,14 +274,21 @@
 .dtrp-startpicker{
     position: relative;
 }
-.dtrp .dropdown-menu{
+.dtrp .dtrp-inner-container.dropdown-menu{
     position: absolute;
+    right: -20px;
 }
 .dtrp-inner-container{
     padding: 0;
 }
 .dtrp-pickers-open .dtrp-inner-container{
     padding: 5px 0;
+}
+.dtrp-right .dtrp-leftcol{
+    padding-left: 5px;
+}
+.dtrp-left .dtrp-rightcol{
+    padding-right: 5px;
 }
 .dtrp-leftcol,
 .dtrp-middlecol,
@@ -286,8 +306,8 @@
     width: auto;
 }
 .dtrp-container .col-sm-4{
-    min-width: 250px;
-    margin-right: 8px;
+    min-width: 260px;
+    margin-right: 15px;
 }
 .dtrp-container .col-sm-4:last-of-type{
     margin-right: 5px;
@@ -298,7 +318,7 @@
 .dtrp-pickers-open .dtrp-ranges-list{
     width: 100%;
     margin-top: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .dtrp-ranges-list .dtrp-ranges-list-item{
     width: 100%;
@@ -362,11 +382,12 @@
     width: 30px;
 }
 .dtrp-buttons-container{
-    padding-left: 2px;
+    text-align: center;
     padding-top: 10px;
 }
 .dtrp-buttons-container button{
     margin-right: 5px;
+    padding: 4px 6px;
 }
 .dtrp .bootstrap-datetimepicker-widget{
     border: none;
