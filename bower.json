@@ -1,0 +1,33 @@
+{
+    "name": "grese-bootstrap-datetimerangepicker",
+    "main": [
+        "bootstrap-datetimerangepicker.js",
+        "bootstrap-datetimerangepicker.css"
+    ],
+    "version": "0.0.1",
+    "homepage": "https://github.com/grese/bootstrap-datetimerangepicker",
+    "authors": [
+        "grese <johngrese@yahoo.com>"
+    ],
+    "description": "Date/Time Range Picker for Twitter Bootstrap v3",
+    "dependencies": {
+        "jquery": ">=1.8.3",
+        "jquery-ui": ">= 1.10",
+        "bootstrap": ">= 3.0",
+        "moment": ">=2.4.0"
+    },
+    "keywords": [
+        "bootstrap",
+        "bootstrap-datepicker",
+        "bootstrap-datetimerangepicker",
+        "bootstrap-datetimepicker",
+        "datetimepicker",
+        "datepicker",
+        "moment",
+        "date",
+        "time",
+        "ui"
+    ],
+    "license": "MIT",
+    "ignore": ["**/.*"]
+}
