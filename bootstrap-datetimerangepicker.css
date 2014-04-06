@@ -211,7 +211,13 @@
 
 /*  Datetimerangepicker styles:  */
 .dtrp.dropdown{
+    position: absolute;
+    float: left;
+    right: 140px;
+}
+.dtrp.dropdown.dtrp-left{
     position: relative;
+    top: 5px;
 }
 .dtrp.dtrp-left{
 
@@ -271,6 +277,7 @@
     top: -12px;
     z-index: 1000;
 }
+<<<<<<< HEAD
 .dtrp-pickers-open.dtrp-left span.dtrp-dropdown-triangle,
 .dtrp-pickers-open.dtrp-left span.dtrp-dropdown-triangle-border{
     right: 40px;
@@ -278,6 +285,11 @@
 .dtrp-pickers-open.dtrp-right span.dtrp-dropdown-triangle,
 .dtrp-pickers-open.dtrp-right span.dtrp-dropdown-triangle-border{
     left: 0px;
+=======
+.dtrp-left span.dtrp-dropdown-triangle,
+.dtrp-left span.dtrp-dropdown-triangle-border{
+    left: 100%;
+>>>>>>> c7416ae73ba4a82a62f65db2eef3ab0767496bae
 }
 .dtrp-container .bootstrap-datetimepicker-widget{
     font-size: 12px;
@@ -290,10 +302,15 @@
     position: relative;
 }
 .dtrp .dtrp-inner-container.dropdown-menu{
+<<<<<<< HEAD
     position: relative;
 }
 .dtrp.dtrp-pickers-open .dtrp-inner-container.dropdown-menu{
     min-height: 280px;
+=======
+    position: absolute;
+    right: -20px;
+>>>>>>> c7416ae73ba4a82a62f65db2eef3ab0767496bae
 }
 .dtrp-inner-container{
     padding: 0;
