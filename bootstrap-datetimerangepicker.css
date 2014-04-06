@@ -211,7 +211,6 @@
 
 /*  Datetimerangepicker styles:  */
 .dtrp.dropdown{
-    position: absolute;
     float: left;
     right: 140px;
 }
@@ -277,19 +276,13 @@
     top: -12px;
     z-index: 1000;
 }
-<<<<<<< HEAD
 .dtrp-pickers-open.dtrp-left span.dtrp-dropdown-triangle,
 .dtrp-pickers-open.dtrp-left span.dtrp-dropdown-triangle-border{
     right: 40px;
 }
 .dtrp-pickers-open.dtrp-right span.dtrp-dropdown-triangle,
-.dtrp-pickers-open.dtrp-right span.dtrp-dropdown-triangle-border{
+.dtrp-pickers-open.dtrp-right span.dtrp-dropdown-triangle-border {
     left: 0px;
-=======
-.dtrp-left span.dtrp-dropdown-triangle,
-.dtrp-left span.dtrp-dropdown-triangle-border{
-    left: 100%;
->>>>>>> c7416ae73ba4a82a62f65db2eef3ab0767496bae
 }
 .dtrp-container .bootstrap-datetimepicker-widget{
     font-size: 12px;
@@ -301,16 +294,10 @@
 .dtrp-startpicker{
     position: relative;
 }
-.dtrp .dtrp-inner-container.dropdown-menu{
-<<<<<<< HEAD
-    position: relative;
-}
 .dtrp.dtrp-pickers-open .dtrp-inner-container.dropdown-menu{
     min-height: 280px;
-=======
     position: absolute;
     right: -20px;
->>>>>>> c7416ae73ba4a82a62f65db2eef3ab0767496bae
 }
 .dtrp-inner-container{
     padding: 0;
@@ -357,8 +344,13 @@
     margin-top: 2px;
     margin-bottom: 10px;
 }
-.dtrp-ranges-list .dtrp-ranges-list-item{
+.dtrp .dtrp-ranges-list .list-group-item{
+    width: 100% !important;
+    min-width: 150px; !important;
+}
+.dtrp-ranges-list .dtrp-ranges-list-item.list-group-item{
     width: 100%;
+    min-width: 150px;
     border: none;
     border-top: 1px solid #ddd;
     background: none;
@@ -429,6 +421,9 @@
 .dtrp .bootstrap-datetimepicker-widget{
     border: none;
     border-radius: 0;
+}
+.dtrp-pickers-closed .col-sm-2{
+    width: 100% !important;
 }
 @media (min-width:768px){ .dtrp-endpicker .bootstrap-datetimepicker-widget{ border-left: 1px solid #ccc; } }
 @media (max-width:767px){

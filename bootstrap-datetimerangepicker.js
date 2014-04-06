@@ -1219,8 +1219,8 @@
             }
             var directionClass = 'dtrp-'+DTRP.options.direction,
                 $container = $("<div class='dtrp dtrp-container dropdown open dtrp-pickers-open "+directionClass+"'></div>")
-                             .append("<span class='dtrp-dropdown-triangle-border'></span>")
-                             .append("<span class='dtrp-dropdown-triangle'></span>"),
+                    .append("<span class='dtrp-dropdown-triangle-border'></span>")
+                    .append("<span class='dtrp-dropdown-triangle'></span>"),
                 $innerContainer = $("<div class='dtrp-inner-container dropdown-menu row'>").appendTo($container),
                 $leftCol, $middleCol, $rightCol, $startPickerDiv, $endPickerDiv, $rangesContainer, $inputsContainer,
                 $buttonsContainer;
@@ -1247,13 +1247,13 @@
 
             var $startInputWrap = $("<div class='dtrp-start-input-wrap'></div>").appendTo($inputsContainer),
                 $endInputWrap = $("<div class='dtrp-end-input-wrap'></div>").appendTo($inputsContainer);
-                $startInputWrap.append($("<span class='dtrp-input-label'>"+DTRP.options.startDateLabelText+"</span>"));
-                $endInputWrap.append($("<span class='dtrp-input-label'>"+DTRP.options.endDateLabelText+"</span>"));
+            $startInputWrap.append($("<span class='dtrp-input-label'>"+DTRP.options.startDateLabelText+"</span>"));
+            $endInputWrap.append($("<span class='dtrp-input-label'>"+DTRP.options.endDateLabelText+"</span>"));
 
             var $startInput = $("<input type='text' disabled='disabled' class='dtrp-start-input form-control'>")
-                                .appendTo($startInputWrap),
+                    .appendTo($startInputWrap),
                 $endInput = $("<input type='text' disabled='disabled' class='dtrp-end-input form-control'>")
-                                .appendTo($endInputWrap),
+                    .appendTo($endInputWrap),
                 $applyBtn = $("<button type='button' class='btn btn-success btn-sm dtrp-apply-btn'>Apply</button>")
                     .appendTo($buttonsContainer),
                 $cancelBtn = $("<button type='button' class='btn btn-default btn-sm dtrp-cancel-btn'>Cancel</button>")
@@ -1310,8 +1310,8 @@
             DTRP.setRange = function(start, end){
                 DTRP.$element.val(
                         moment(start).format(DTRP.options.format)+' '+
-                            DTRP.options.deliminator+' '+
-                            moment(end).format(DTRP.options.format)
+                        DTRP.options.deliminator+' '+
+                        moment(end).format(DTRP.options.format)
                 );
             };
             DTRP.hidePickers = function(){
@@ -1323,6 +1323,7 @@
                     $leftCol.hide();
                 }
                 $container.removeClass('dtrp-pickers-open');
+                if(!$container.hasClass('dtrp-pickers-closed')){ $container.addClass('dtrp-pickers-closed'); }
                 $buttonsContainer.hide();
                 $inputsContainer.hide();
             };
@@ -1334,7 +1335,8 @@
                     $middleCol.show();
                     $leftCol.show();
                 }
-                $container.addClass('dtrp-pickers-open');
+                $container.removeClass('dtrp-pickers-closed');
+                if(!$container.hasClass('dtrp-pickers-open')){ $container.addClass('dtrp-pickers-open'); }
                 $buttonsContainer.show();
                 $inputsContainer.show();
             };
