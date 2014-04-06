@@ -23,7 +23,7 @@
         "bootstrap-datetimepicker",
         "datetimepicker",
         "datepicker",
-        "moment",
+        "momentjs",
         "date",
         "time",
         "ui"

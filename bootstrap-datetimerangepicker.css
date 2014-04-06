@@ -2,6 +2,7 @@
  * DateTimeRangePicker for Bootstrap v3
  * John Grese
  */
+.dtrp{ display: none; }
 .dtrp .bootstrap-datetimepicker-widget {
     top: 0;
     left: 0;
@@ -261,7 +262,7 @@
     position: relative;
 }
 .dtrp .dropdown-menu{
-    position: relative !important;
+    position: absolute;
 }
 .dtrp-inner-container{
     padding: 0;
