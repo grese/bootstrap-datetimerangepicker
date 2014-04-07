@@ -1297,9 +1297,6 @@
             DTRP.$element.on('focus', function(){
                 DTRP.show();
             });
-            DTRP.$element.on('blur', function(){
-                DTRP.hide();
-            });
 
             DTRP.hide = function(){
                 $container.hide();
@@ -1323,7 +1320,6 @@
                     $leftCol.hide();
                 }
                 $container.removeClass('dtrp-pickers-open');
-                if(!$container.hasClass('dtrp-pickers-closed')){ $container.addClass('dtrp-pickers-closed'); }
                 $buttonsContainer.hide();
                 $inputsContainer.hide();
             };
@@ -1335,8 +1331,7 @@
                     $middleCol.show();
                     $leftCol.show();
                 }
-                $container.removeClass('dtrp-pickers-closed');
-                if(!$container.hasClass('dtrp-pickers-open')){ $container.addClass('dtrp-pickers-open'); }
+                $container.addClass('dtrp-pickers-open');
                 $buttonsContainer.show();
                 $inputsContainer.show();
             };
